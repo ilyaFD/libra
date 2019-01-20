@@ -1,0 +1,214 @@
+.pricing {
+	border-bottom: $sectionBorder;
+	&__wrap {
+		padding-top: 133px;
+		padding-bottom: 208px;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: 767px) {
+			padding-top: 60px;
+			padding-bottom: 60px;		
+		}
+	}
+	&__header {
+		display: flex;
+		margin-bottom: 74px;
+		justify-content: flex-end;
+		align-items: center;
+		@media (max-width: 992px) {
+			flex-direction: column;
+			align-items: flex-end;
+			margin-bottom: 25px;
+		}
+		p {
+			margin: 0;
+			max-width: 445px;
+			font-size: 24px;
+			@media (max-width: 992px) {
+				order: 2;
+				margin-top: 40px;
+				text-align: right;
+			}
+			@media (max-width: 767px) {
+				margin-top: 0;
+				font-size: 14px;
+			}
+		}
+		h2 {
+			font-size: 88px;
+			font-weight: bold;
+			line-height: 73px;
+			@media (max-width: 992px) {
+				order: 1;
+				font-size: 50px;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+			@media (max-width: 767px) {
+				font-size: 24px;
+			}
+		}
+	}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+		> div:first-child{
+			margin-left: 0;
+		}
+		> div:last-child{
+			margin-right: 0;
+		}
+	}
+	&__box {
+		width: 100%;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 15px;
+		border: 1px solid $yellow;
+		border-radius: 10px;
+		padding: 44px 0 40px;
+		@media (max-width: 767px) {
+			height: auto;
+			margin: 0;
+			padding: 25px 0;
+			margin-bottom: 15px;
+			.pricing__designation {
+				border-left: 1px solid $grey;
+			}
+			.pricing__box__btn {
+				//height: 46px;
+				//box-shadow: 0px 8px 11px rgba(50, 50, 71, 0.13);
+				//opacity: 1;
+				//background: $yellow;
+			}
+		}
+		&:hover {
+			background: $yellow;
+			box-shadow: 0px 20px 30px rgba(26, 38, 47, 0.15);
+			.pricing__box__icon {
+				//transform: translate(0px, -23px);
+				color: $white;
+				path{
+					fill: $white;
+				}
+			}
+			.box__price {
+				//transform: translate(0px, -51px);
+			}
+			.pricing__designation{
+				span{
+					color: $white;
+				}
+			}
+			.pricing__box__btn {
+				//height: 46px;
+				//box-shadow: 0px 8px 11px rgba(50, 50, 71, 0.13);
+				//opacity: 1;
+				//margin-top: -46px;
+			}
+		}
+	}
+	&__box__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 38px;
+		@media (max-width: 767px) {
+			margin-bottom: 5px;
+		}
+		span{
+			font-size: 24px;
+			font-weight: 200;
+		}
+	}
+	&__box__icon {
+		font-size: 100px;
+		margin-bottom: 60px;
+		font-family: 'icomoon' !important;
+		font-weight: normal;
+		@media (max-width: 767px) {
+			font-size: 90px;
+			margin-bottom: 5px;
+		}
+	}
+	&__box__btn {
+		color: #283139;
+		font-size: 24px;
+		background: $white;
+		border-radius: 8px;
+		margin-bottom: -46px;
+		height: 0;
+		overflow: hidden;
+		padding: 3px 12px;
+		opacity: 0;
+		@media (max-width: 767px) {
+			//height: 46px;
+			//box-shadow: 0px 8px 11px rgba(50, 50, 71, 0.13);
+			//opacity: 1;
+			margin-bottom: 0;
+			//padding: 3px 30px;
+		}
+	}
+	.manager__icon:before {
+		content: "\e907";
+	}
+	.employee__icon:before {
+		content: "\e903";
+	}
+	&__designation {
+		height: 100%;
+		border-left: 1px solid $grey;
+		margin-left: 12px;
+		span{
+			line-height: 16px;
+			font-size: 12px;
+			display: block;
+			padding-left: 5px;
+			color: $grey;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.pricing__box:hover {
+		background: $white;
+		box-shadow: none;
+		.pricing__box__icon {
+			transform: none;
+			color: $dark;
+			path{
+				fill: $dark;
+			}
+		}
+		.box__price {
+			transform: none;
+		}
+		.pricing__designation {
+			span{
+				color: $grey;
+			}
+		}
+		.pricing__box__btn {
+			transform: none;
+			margin-top: 0;
+		}
+	}
+}
+.pricing__box, .pricing__box__icon, .pricing__box__icon path, .pricing__box__btn, .pricing__designation span, .box__price{
+	transition: 0.3s;
+}
+.box__price {
+	display: flex;
+	align-items: center;
+	@media (max-width: 767px) {
+		margin-bottom: 5px;
+	}
+	.price {
+		font-size: 24px;
+		font-weight: 200;
+	}
+}

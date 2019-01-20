@@ -1,0 +1,202 @@
+.content {
+	padding-top: 200px;
+	min-height: 900px;
+	border-bottom: $sectionBorder;
+	position: relative;
+	@media (max-width: 992px) {
+		min-height: auto;
+	}
+	@media (max-width: 767px) {
+		padding-top: 120px;
+		min-height: auto;
+	}
+	&__whats-around {
+		display: flex;
+		p {
+			direction: rtl;
+		}
+	}
+	&__section {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__banner {
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: 767px) {
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+		img {
+			vertical-align: bottom;
+			@media (max-width: 767px) {
+				margin-bottom: -40%;
+			}
+		}
+	}
+
+	&__text {
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 50%;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		h2 {
+			font-size: 88px;
+			margin-bottom: 65px;
+			line-height: 1;
+			@media (max-width: 992px){
+				font-size: 50px;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+			@media (max-width: 767px) {
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			font-size: 24px;
+			max-width: 445px;
+			margin: 0 0 30px auto;
+			@media (max-width: 767px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.whats-around {
+		display: flex;
+		max-width: 343px;
+		margin: 30px 0 0 auto;
+		@media (max-width: 767px) {
+			display: none;
+		}
+		
+		&__item {
+			display: flex;
+			align-items: center;
+			box-shadow: 0px 20px 30px rgba(26, 38, 47, 0.15);
+			span {
+				font-size: 18px;
+				vertical-align: middle;
+			}
+			&_yellow {
+				width: 60%;
+				background-color: $yellow;
+				text-align: left;
+				border-radius: 4px;
+				position: relative;
+				right: -3px;
+				img {
+					margin: 0 15px 0 10px; 
+				}
+			}
+			&_dark {
+				background-color: $dark;
+				border-radius: 4px;
+				color: $white;
+				width: 40%;
+				text-align: right;
+				span {
+					margin: 0 15px 0 13px;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		overflow: hidden;
+		margin-right: -80px;
+		@media (max-width: 1280px) {
+			margin-right: 0;
+		}
+		@media (max-width: 767px) {
+			max-width: 90px;
+			position: absolute;
+			display: block;
+			top: 30px;
+			left: 20px;
+		}
+	}
+	.add-wine-icon{
+		img {
+			margin-bottom: -20px;
+			@media (max-width: 767px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&_rush {
+		background: url('../img/rush-hours_bg.jpg') center no-repeat;
+		background-size: cover;
+		h2 {
+			color: $yellow;
+			@media (max-width: 767px) {
+				font-weight: 200;
+			}
+		}
+		p {
+			color: $white;
+			@media (max-width: 767px) {
+				font-weight: 200;
+			}
+		}
+	}
+}
+.content-partners {
+	padding-top: 0;
+	@media (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+	}
+	.bg-partners {    
+		background: url(../img/partners_bg.jpg) no-repeat 50% 50%;
+		background-size: cover;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		z-index: -1;
+		@media (max-width: 767px) {
+			height: 60vh;
+			width: 100%;
+			position: inherit;
+			z-index: 0;
+			order: 2;
+		}
+	}
+	.section {
+		padding-top: 200px;
+		height: 100%;
+		@media (max-width: 767px) {
+			order: 1;
+			padding-top: 120px; 
+		}
+	}
+	&__text{
+		width: 50%;
+		margin-left: 50%;
+		padding-left: 15px;
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+
+}
